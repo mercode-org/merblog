@@ -1,0 +1,41 @@
+extends main.pug
+
+block css
+
+block content
+  script(src='./js/highlight.js')
+  script.
+    hljs.initHighlightingOnLoad();
+
+  .articlegrid
+    :markdown-it
+        # Example Post 
+        ![an example image.](assets/example.png)
+        ##### A Mercode Post - 00/00/0000 
+        ---
+          An example text.\
+          *an example italic text*.\
+          **an example bold text**.
+          > ye example quote.
+
+          `console.log("an example code snippet");`
+          ```javascript
+          console.log("an example code block"); 
+          ```
+          
+          An example
+            : definition.
+
+          ~~An example strikethrought.~~
+          
+          - An
+          - Example        
+          - Unordered List
+            
+          1. An
+          2. Example
+          3. Ordered List
+
+          - [ ] An
+          - [ ] Example
+          - [ ] Checklist
